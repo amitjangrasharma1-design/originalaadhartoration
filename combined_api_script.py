@@ -235,11 +235,11 @@ def home():
             "/all": "Get all three APIs data"
         },
         "usage": {
-            "ration-card": "GET /ration-card?rc_id=077004047354&state_code=28&id_type=R",
-            "sale-transactions": "GET /sale-transactions?rc_id=077004047354",
-            "impds": "GET /impds?uid=290961983263&state_code=28&id_type=U",
-            "combined": "GET /combined?rc_id=077004047354",
-            "all": "GET /all?rc_id=077004047354&uid=290961983263"
+            "ration-card": "GET /ration-card?rc_id=123456789104&state_code=28&id_type=R",
+            "sale-transactions": "GET /sale-transactions?rc_id=123456789104",
+            "impds": "GET /impds?uid=123456789142&state_code=28&id_type=U",
+            "combined": "GET /combined?rc_id=123456789104",
+            "all": "GET /all?rc_id=123456789104&uid=123456789142"
         }
     })
 
@@ -384,8 +384,8 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python combined_api_script.py 077004047354
-  python combined_api_script.py 077004047354 --verbose
+  python combined_api_script.py 123456789104
+  python combined_api_script.py 123456789104 --verbose
         """
     )
     
@@ -417,10 +417,11 @@ if __name__ == "__main__":
         print("🚀 Starting Flask Combined API Server...")
         print("📖 Available endpoints:")
         print("   GET  / - API documentation")
-        print("   GET  /ration-card?rc_id=077004047354")
-        print("   GET  /sale-transactions?rc_id=077004047354")
-        print("   GET  /impds?uid=290961983263")
-        print("   GET  /combined?rc_id=077004047354")
-        print("   GET  /all?rc_id=077004047354&uid=290961983263")
+        print("   GET  /ration-card?rc_id=123456789104")
+        print("   GET  /sale-transactions?rc_id=123456789104")
+        print("   GET  /impds?uid=123456789142")
+        print("   GET  /combined?rc_id=123456789104")
+        print("   GET  /all?rc_id=123456789104&uid=123456789142")
         print("=" * 50)
         app.run(host="0.0.0.0", port=5000, debug=True)
+
